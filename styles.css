@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    padding-top: 20px;/*
+    border-right-style: solid;
+    border-color: #888;
+    border-width: 1px;*/
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    color: #e60023;
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .smallgrid h1 {
+    font-size: 90px;
+  }
+  .sidebar ul li {
+    margin: 15px 15px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    margin-left: 200px; /* Same width as the sidebar */
+    width: calc(100% - 250px);
+  }
+  
+  /* Header and Search Bar */
+  .header {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .search-bar {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 20px 10px 40px; /* Extra padding for icon */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url('images/search-icon.webp'); /* Update with your icon path */
+    background-size: 18px; /* Adjust icon size as needed */
+    background-position: 10px center;
+    background-repeat: no-repeat;
+  }
+  
+  .search-bar input::placeholder {
+    color: #888;
+  }
+  
+  /*home layout*/
+  .smallgrid{
+   /* display:grid;
+    grid-template-columns:auto auto auto;
+    gap: 15px;
+    padding: 20px;*/
+    column-count: 2; /* Set number of columns */
+  column-gap: 15px; /* Gap between columns */
+  padding: 20px;
+  }
+  .sgrid-item {
+    display: inline-block; /* Allow items to take space based on their height */
+    width: 100%; /* Ensures images take full width */
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Add some space between items vertically */
+  }
+  .smallgrid img{
+    max-width:90%;
+    height:auto;
+    margin-left :50px;
+    border-radius: 10px;
+    margin-top: 25px;
+  }
+  .smallgrid h1{
+    text-align: center;
+    font-size: 90px;
+  }
+  /* Grid Layout */
+  /* Grid Layout for Pinterest-style masonry */
+/* Grid Layout for Pinterest-style masonry using columns */
+
+.grid-container {
+  column-count: 5; /* Set number of columns */
+  column-gap: 15px; /* Gap between columns */
+  padding: 20px;
+}
+
+/* Items within the grid container */
+.grid-item {
+  display: inline-block; /* Allow items to take space based on their height */
+  width: 100%; /* Ensures images take full width */
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px; /* Add some space between items vertically */
+}
+
+.grid-item img {
+  width: 100%; /* Images take the full width of their container */
+  height: auto; /* Height determined by the image aspect ratio */
+  display: block;
+  border-radius: 10px;
+}
+  
+ .abcu{
+  border-radius: 10px;
+  background-color: white;
+  padding: 180px;
+  text-align: center;
+ }
+ .abcl{
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+ }
+ .ab-img{
+  max-width:50%;
+  height:auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  margin:auto;
+}
+/* fonts */
+.limelight-regular {
+  padding: 10px;
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: larger;
+}
+.faculty-glyphic-regular {
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.bonheur-royale-regular {
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-right: none;
+  }
+
+  .sidebar h2 {
+    font-size: 40px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar ul li {
+    margin: 10px;
+  }
+
+  .sidebar ul li a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  .smallgrid h1 {
+    font-size: 40px;
+  }
+
+  .smallgrid,
+  .grid-container {
+    column-count: 1;
+  }
+
+  .smallgrid img,
+  .grid-item img,
+  .ab-img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  .abcu {
+    padding: 40px 20px;
+  }
+
+  .abcl {
+    padding: 20px 10px;
+  }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+  }
+
+  .smallgrid,
+  .grid-container {
+    column-count: 2;
+  }
+
+  .smallgrid h1 {
+    font-size: 60px;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+
+  .abcu {
+    padding: 100px;
+  }
+}
+
